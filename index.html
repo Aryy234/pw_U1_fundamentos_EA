@@ -30,8 +30,10 @@
           
           <!--br es para saltar de línea-->
           <br>
-          <em>textos en cursiva y resaltado</em>
+          <em>textos en cursiva, con importancia</em>
+          <br>
           <i>texto en cursiva</i>
+          <br>
           <u>texto subrayado</u>
 
           <!--hr es para una línea horizontal-->
@@ -59,6 +61,80 @@
               </ol>
 
               <!-- Tablas -->
+               <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cédula</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>1712345678</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>María</td>
+                        <td>González</td>
+                        <td>1723456789</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>Rodríguez</td>
+                        <td>1734567890</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Laura</td>
+                        <td>Martínez</td>
+                        <td>1745678901</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                </tbody>
+               </table>
+
+               <!-- Contenedores HTML-->
+                <!-- Es un elemento que agrupa otros elementos -->
+                 <!-- tenemos: <div>, <section>, <article>, <header>, <footer>, <nav>, <aside> -->
+                    <div>
+                        <button>Actualizar</button>
+                        <button>Eliminar</button>
+                        <button>Buscar</button>
+                    </div>
+
+            <!-- Formularios-->
+            <!-- Es un elemento que permite la entrada de datos por parte del usuario -->
+             <form action="https://www.google.com">
+                <h1>Estudiante</h1>
+                <label for="id_nombre">Nombre:</label>
+                <input type="text" id="id_nombre">
+
+                <label for="id_email">Email:</label>
+                <input id="id_email" type="email">
+
+                <label for="id_fecha">Fecha de nacimiento:</label>
+                <input id="id_fecha" type="date">
+
+                <label for="id_password">Contraseña:</label>
+                <input id="id_password" type="password">
+
+                <button>Guardar</button>
+             </form>
+
+             <!-- Multimedia -->
+              <img src="https://i.pinimg.com/736x/3d/27/41/3d2741a30bdc5a4b8dd19be97daf0914.jpg"
+              alt="No se pudo presentar la imagen" width="315" height="180">
+              <img src="img\React-icon.svg.png" alt="Estructura base de una página web" width="220" height="180">
+              <img src="https://i.pinimg.com/originals/e5/4a/fa/e54afabd75adb33464e85f2687b43f87.gif" alt="">
+
+              <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              </video>
     </section>
     <aside></aside>
     <footer>Av. America entre la gasca y Bolivia
