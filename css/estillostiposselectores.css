@@ -1,0 +1,46 @@
+/* 2. Selector por clase */
+.titulos {
+    color: #2E9AFE;
+    font-size: 30px;
+    background: blue;
+}
+
+/*3. Selector por id 
+los id deben ser únicos en la página */
+#id_titulo {
+    color: antiquewhite;
+    background: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* 4. Selector pseudo-clase 
+su función es aplicar estilos a un elemento en un estado específico */
+i:hover{
+    color: orange;
+    font-size: 50px;
+}
+
+input:focus{
+    background: yellow;
+    border-width: 20px;
+    border-color: aquamarine;
+}
+
+/* 5. Selector por atributo */
+/*aplica estilos a los elementos que contienen un atributo específico */
+[id] {
+    color: brown;
+    font-size: 40px;
+}
+img[alt *="uce"] {
+    width: 30px;
+    height: 30px;
+    border: 10px solid red;
+}
+
+/* 6. Selector universal */
+/*aplica estilos a todos los elementos de la página */
+* {
+    /*declaraciones de estilo*/
+}
