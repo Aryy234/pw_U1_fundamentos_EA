@@ -59,3 +59,18 @@ h2, header{
     font-size: 35px;
 
 }
+
+.msg_error{
+    background: #ffcccc;
+    border-left: 6px solid #ff3333;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+    font-weight: bold;
+}
+
+.error_asterisco{
+    color: #ff3333;
+    font-weight: bold;
+    display: none;
+}
