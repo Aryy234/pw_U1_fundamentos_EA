@@ -8,7 +8,9 @@ function validarCampos() {
     
     let nombre = document.getElementById("id_nombre").value;
     let apellido = document.getElementById("id_apellido").value;
+    let fecha = document.getElementById("id_fecha").value;
     let email = document.getElementById("id_email").value;
+    let password = document.getElementById("id_password").value;
     
     let errores = [];
     let hayErrores = false;
@@ -25,6 +27,16 @@ function validarCampos() {
         hayErrores = true;
     }
 
+    if(fecha === ""){
+        errores.push("El campo fecha de nacimiento es obligatorio");
+        mostrarAsteriscoError('id_error_fecha');
+        hayErrores = true;
+    } else if(!validarFecha(fecha)){
+        errores.push("La fecha de nacimiento no es válida (debe ser mayor de edad)");
+        mostrarAsteriscoError('id_error_fecha');
+        hayErrores = true;
+    }
+
     if(email === ""){
         errores.push("El campo email es obligatorio");
         mostrarAsteriscoError('id_error_email');
@@ -32,6 +44,16 @@ function validarCampos() {
     } else if(!validarEmail(email)){
         errores.push("El formato del email no es válido");
         mostrarAsteriscoError('id_error_email');
+        hayErrores = true;
+    }
+
+    if(password === ""){
+        errores.push("El campo password es obligatorio");
+        mostrarAsteriscoError('id_error_password');
+        hayErrores = true;
+    } else if(!validarPassword(password)){
+        errores.push("El password debe tener al menos 6 caracteres");
+        mostrarAsteriscoError('id_error_password');
         hayErrores = true;
     }
 
@@ -65,11 +87,25 @@ function limpiarMensaje(){
 }
 
 function validarEmail(email) {
-
     const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     return patron.test(email);
+}
 
+function validarFecha(fecha) {
+    const fechaNacimiento = new Date(fecha);
+    const fechaActual = new Date();
+    const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    const mes = fechaActual.getMonth() - fechaNacimiento.getMonth();
+    
+    if (mes < 0 || (mes === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
+        return edad - 1 >= 18;
+    }
+    
+    return edad >= 18;
+}
+
+function validarPassword(password) {
+    return password.length >= 6;
 }
 
 function mostrarMensajeExito(msj){
